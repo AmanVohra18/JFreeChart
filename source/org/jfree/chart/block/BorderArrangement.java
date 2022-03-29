@@ -122,6 +122,7 @@ public class BorderArrangement implements Arrangement, Serializable {
      * 
      * @return The block size.
      */
+    //TODO: The same literal is being used multiple times in this function.We should declare it as a constant.
     public Size2D arrange(BlockContainer container, 
                           Graphics2D g2, 
                           RectangleConstraint constraint) {
