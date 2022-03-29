@@ -318,7 +318,6 @@ public class RelativeDateFormat extends DateFormat {
      * 
      * @return The formatted date.
      */
-    //TODO: Using the String.valueOf() is redundant. We should Remove the use of string.valueOf () functionality.
     public StringBuffer format(Date date, StringBuffer toAppendTo,
                                FieldPosition fieldPosition) {
         long currentMillis = date.getTime();
@@ -334,8 +333,8 @@ public class RelativeDateFormat extends DateFormat {
         if (days != 0 || this.showZeroDays) {
             toAppendTo.append(this.dayFormatter.format(days) + getDaySuffix());
         }
-        toAppendTo.append(String.valueOf(hours) + getHourSuffix());
-        toAppendTo.append(String.valueOf(minutes) + getMinuteSuffix());
+        toAppendTo.append(hours + getHourSuffix());
+        toAppendTo.append(minutes + getMinuteSuffix());
         toAppendTo.append(this.secondFormatter.format(seconds) 
                 + getSecondSuffix());
         return toAppendTo;   
