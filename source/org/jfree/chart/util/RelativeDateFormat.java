@@ -318,6 +318,7 @@ public class RelativeDateFormat extends DateFormat {
      * 
      * @return The formatted date.
      */
+    //TODO: Remove the use of string.valueOf () functionality
     public StringBuffer format(Date date, StringBuffer toAppendTo,
                                FieldPosition fieldPosition) {
         long currentMillis = date.getTime();
