@@ -221,6 +221,7 @@ import org.jfree.util.SortOrder;
  * A general plotting class that uses data from a {@link CategoryDataset} and 
  * renders each data item using a {@link CategoryItemRenderer}.
  */
+
 public class CategoryPlot extends Plot implements ValueAxisPlot, 
         Zoomable, RendererChangeListener, Cloneable, PublicCloneable, 
         Serializable {
@@ -1230,6 +1231,7 @@ public class CategoryPlot extends Plot implements ValueAxisPlot,
      * 
      * @see #getDomainAxisForDataset(int)
      */
+    // TODO: Get rid of the integer instantiation to save memory space.
     public void mapDatasetToDomainAxis(int index, int axisIndex) {
         this.datasetToDomainAxisMap.set(index, new Integer(axisIndex));  
         // fake a dataset change event to update axes...
