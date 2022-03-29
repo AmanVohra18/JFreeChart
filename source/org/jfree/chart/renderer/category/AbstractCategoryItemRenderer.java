@@ -1253,10 +1253,8 @@ public abstract class AbstractCategoryItemRenderer extends AbstractRenderer
      *
      * @return The hash code.
      */
-    // TODO: Remove the unnecessary local variable before return
     public int hashCode() {
-        int result = super.hashCode();
-        return result;
+        return super.hashCode();
     }
 
     /**
