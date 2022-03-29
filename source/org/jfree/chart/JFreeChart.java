@@ -1137,7 +1137,7 @@ public class JFreeChart implements Drawable,
                      ChartRenderingInfo info) {
 
         notifyListeners(new ChartProgressEvent(this, this, 
-                ChartProgressEvent.DRAWING_STARTED, 0));
+                ChartProgressEvent.DRAWING_STARTED));
 
         // record the chart area, if info is requested...
         if (info != null) {
@@ -1224,7 +1224,7 @@ public class JFreeChart implements Drawable,
         g2.setClip(savedClip);
 
         notifyListeners(new ChartProgressEvent(this, this, 
-                ChartProgressEvent.DRAWING_FINISHED, 100));
+                ChartProgressEvent.DRAWING_FINISHED));
     }
 
     /**
