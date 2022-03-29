@@ -166,7 +166,7 @@ public class SunJPEGEncoderAdapter implements ImageEncoder {
         ImageWriteParam p = writer.getDefaultWriteParam();
         p.setCompressionMode(ImageWriteParam.MODE_EXPLICIT);
         p.setCompressionQuality(this.quality);
-        ImageOutputStream ios = ImageIO.createImageOutputStream(outputStream);
+        ImageOutputStream  ios = ImageIO.createImageOutputStream(outputStream);
         writer.setOutput(ios);
         writer.write(null, new IIOImage(bufferedImage, null, null), p);
         ios.flush();
