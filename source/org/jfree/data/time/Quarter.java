@@ -435,12 +435,11 @@ public class Quarter extends RegularTimePeriod implements Serializable {
      *
      * @return The quarter.
      */
-    //TODO: Change indexOf(char) instead of indexOf(string)
     public static Quarter parseQuarter(String s) {
 
         // find the Q and the integer following it (remove both from the
         // string)...
-        int i = s.indexOf("Q");
+        int i = s.indexOf('Q');
         if (i == -1) {
             throw new TimePeriodFormatException("Missing Q.");
         }
