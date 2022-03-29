@@ -167,6 +167,7 @@ public class TimePeriodValue implements Cloneable, Serializable {
      *
      * @return A clone.
      */
+    //FIXME: This method needs to handle the CloneNotSupportedException, a try-catch block or throws needs to be used
     public Object clone() {
         Object clone = null;
         try {
