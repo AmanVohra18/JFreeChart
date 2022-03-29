@@ -46,6 +46,7 @@
 
 package org.jfree.data.contour;
 
+import java.util.ArrayList;
 import java.util.Arrays;
 import java.util.Date;
 import java.util.Vector;
@@ -116,7 +117,6 @@ public class DefaultContourDataset extends AbstractXYZDataset
      * @param yData  the y values.
      * @param zData  the z values.
      */
-    //TODO: The collection Vector has lesser functionality as compared to others.We should Use the Array List Collection.
     public void initialize(Object[] xData,
                            Object[] yData,
                            Object[] zData) {
@@ -132,8 +132,7 @@ public class DefaultContourDataset extends AbstractXYZDataset
         // 3) we march along the y-axis at the same value of x until a new 
         //    value x is found at which point we will flag the index 
         //    where x[i+1]<>x[i]
-
-        Vector tmpVector = new Vector(); //create a temporary vector
+        ArrayList tmpVector = new ArrayList(); //create a temporary vector
         double x = 1.123452e31; // set x to some arbitary value (used below)
         for (int k = 0; k < this.xValues.length; k++) {
             if (xData[k] != null) {
