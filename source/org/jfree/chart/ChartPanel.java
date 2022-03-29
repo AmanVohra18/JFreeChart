@@ -2234,13 +2234,12 @@ public class ChartPanel extends JPanel implements ChartChangeListener,
     /**
      * Creates a print job for the chart.
      */
-    //TODO: Comparison of Objects using = can cause issues, we should replace it by equals().
     public void createChartPrintJob() {
 
         PrinterJob job = PrinterJob.getPrinterJob();
         PageFormat pf = job.defaultPage();
         PageFormat pf2 = job.pageDialog(pf);
-        if (pf2 != pf) {
+        if (!(pf2.equals(pf))) {
             job.setPrintable(this, pf2);
             if (job.printDialog()) {
                 try {
