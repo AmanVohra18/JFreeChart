@@ -1231,9 +1231,8 @@ public class CategoryPlot extends Plot implements ValueAxisPlot,
      * 
      * @see #getDomainAxisForDataset(int)
      */
-    // TODO: Get rid of the integer instantiation to save memory space.
     public void mapDatasetToDomainAxis(int index, int axisIndex) {
-        this.datasetToDomainAxisMap.set(index, new Integer(axisIndex));  
+        this.datasetToDomainAxisMap.set(index, axisIndex);
         // fake a dataset change event to update axes...
         datasetChanged(new DatasetChangeEvent(this, getDataset(index)));  
     }
