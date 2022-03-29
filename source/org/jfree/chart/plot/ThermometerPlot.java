@@ -671,6 +671,7 @@ public class ThermometerPlot extends Plot implements ValueAxisPlot,
      * @deprecated Use setUnits(int) instead.  Deprecated as of version 1.0.6,
      *     because this method is a little obscure and redundant anyway.
      */
+    //TODO : use equalsIgnoreCase instead of converting to Uppercase
     public void setUnits(String u) {
         if (u == null) {
             return;
