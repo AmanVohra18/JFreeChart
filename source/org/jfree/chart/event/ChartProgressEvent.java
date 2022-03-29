@@ -71,6 +71,7 @@ public class ChartProgressEvent extends java.util.EventObject {
      * @param type  the type of event.
      * @param percent  the percentage of completion.
      */
+    //TODO: Remove unused parameter Percent.
     public ChartProgressEvent(Object source, JFreeChart chart, int type, 
                               int percent) {
         super(source);
