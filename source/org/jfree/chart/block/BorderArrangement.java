@@ -122,10 +122,10 @@ public class BorderArrangement implements Arrangement, Serializable {
      * 
      * @return The block size.
      */
-    //TODO: The same literal is being used multiple times in this function.We should declare it as a constant.
     public Size2D arrange(BlockContainer container, 
                           Graphics2D g2, 
                           RectangleConstraint constraint) {
+        final String  NOT_IMPLEMENTED = "Not implemented.";
         RectangleConstraint contentConstraint 
                 = container.toContentConstraint(constraint);
         Size2D contentSize = null;
@@ -136,10 +136,10 @@ public class BorderArrangement implements Arrangement, Serializable {
                 contentSize = arrangeNN(container, g2);  
             }
             else if (h == LengthConstraintType.FIXED) {
-                throw new RuntimeException("Not implemented.");  
+                throw new RuntimeException(NOT_IMPLEMENTED);
             }
             else if (h == LengthConstraintType.RANGE) {
-                throw new RuntimeException("Not implemented.");  
+                throw new RuntimeException(NOT_IMPLEMENTED);
             }
         }
         else if (w == LengthConstraintType.FIXED) {
@@ -155,10 +155,10 @@ public class BorderArrangement implements Arrangement, Serializable {
         }
         else if (w == LengthConstraintType.RANGE) {
             if (h == LengthConstraintType.NONE) {
-                throw new RuntimeException("Not implemented.");  
+                throw new RuntimeException(NOT_IMPLEMENTED);
             }
             else if (h == LengthConstraintType.FIXED) {
-                throw new RuntimeException("Not implemented.");  
+                throw new RuntimeException(NOT_IMPLEMENTED);
             }
             else if (h == LengthConstraintType.RANGE) {
                 contentSize = arrangeRR(container, constraint.getWidthRange(),
